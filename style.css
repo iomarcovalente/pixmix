@@ -16,7 +16,7 @@ a{
 }
 a:hover{
 	text-decoration: none;
-	color: #00f28f;
+	color: #8701AC;
 }
 
 .main{
@@ -64,6 +64,39 @@ button.btn:hover{
 	-webkit-transition:  background 2s, color 2s;
 }
 
+.loader{
+	font-size: 20px;
+	color: #fff;
+    height: 100%;
+    display: block;
+    background: #00f28f;
+    border-radius: 4px;
+    position: absolute;
+    top: 0;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    animation-duration: 3s;
+  	animation-name: load;
+  	animation-fill-mode: forwards;
+  	overflow: hidden;
+}
+
+@keyframes load {
+  from {
+    width: 1%;
+    padding-left: 2px;
+    letter-spacing: 50px;
+    margin-right: 100%;
+  }
+
+  to {
+    width: 84.62%;
+    padding-left: 10px;
+    letter-spacing: 1px;
+    margin-right: 0%;
+  }
+}
+
 #optionsform{
 	margin-left: -14px;
 }
@@ -76,6 +109,29 @@ button.btn:hover{
 	font-size: 18px;
 	padding: 20px 24px;
 	opacity: 1;
+}
+input[type="checkbox"] {
+    display:none;
+}
+input[type="checkbox"] + label span {
+    display:inline-block;
+    width:35px;
+    height:27px;
+    margin:-1px 4px 0 0;
+    vertical-align:middle;
+    background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEYAAAAbCAYAAADBPvmtAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4AUfDDggP+EczAAAAyNJREFUWMPlWc9LFHEU/7zdzQ56UYh+IYJZrOYsepSEoA4iVjMIZRYz1CHCIm/1H+TJToWZh8BZKzHIGSvMICgCT4G5YxmSQYQdNrHEn7vj7uvQbju7uv5Y13XXfdeZ977v++Z93vu8N6SpngoAQ9h6qZQU18fVXkgnX2wpcgTrPGfbfOnrGqnSVM8gAOhugxyWZwyAtsCJROym1JfXT7/lzi/MDv7LWmNKlIUCa2BIUlxJd0ZTPZyAWsp86e0crphfmB2KBI3zdbfx0IEsFk01KgD+EP4Y4eAw862sDczLJ1/yTNOMqTVEkiJQuPhmpZimfwZgC7TIa7fb8/q6PhEAZDWUrPAJBgPFkiLMWdt11ggzg5Y3JZIUF9ntjvlYHpPW8k7/SZa6kHCn0lRPFZENDLZUFPISUT4AiHJ5VMdKeygdFw+w7jY6mPlYXaPzaAJFlkzTXwxgEIju1lO/fxVebj7hj8d801p0t9HEzFcAlGmq8Wqj+j7fYgGAr4iJiqS4aN/eQnO1kSDdpS1yKa7R3UYPAPR3j60Jq97O4WqbzTYZy3g51IxqGw7HJZ+Z0JWuAnhgudRZTfWM1p4/UhpP4a0+QTOz0wcDgaX3K5A3EK1dqtI+Y0RZ6CCitmgaRk7dbejxdLyTP/cHAks/ouFDvpDuus7NiHYtysJ1IttNKxSY+YzuNnpju5Wmeqpzdu2esMCHiehPMBgo2siZGcNjRLm8lYhuxPASSVON0bpGJw/0jFN/99geIloGH1EW8usvVXh3ZGBCmXMPQHsMdXVqqqd7Zm66xOdf9DJHaD4RzUqKi148Ht0w/8mowLx59p0kxdVERM2RBQsDQIPD7hizwgfAPDOXAMCpC6UbXn1k1Kx0sr6IQ5lzV1M9OQBaV5h9QEQkykLuZs7K2FlJUlx3ANxfNvgQTYmyQM8ffaasDMxAzzhJiusaETX9RxVg+vyLTgA4fbGMN2M/Y9cONecOhWHVrrtHCgC+LcpCTrLs74h9jCiXtwBoSabNqL8ECS6u11yDIIG/BNvtiy22om+BUIp0kmrXBqAyRRlfmaR3UuLLXzFINfUgdAZ7AAAAAElFTkSuQmCC') left top no-repeat;
+    cursor:pointer;
+}
+input[type="checkbox"]:checked + label span {
+    background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEYAAAAbCAYAAADBPvmtAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4AUfDDggP+EczAAAAyNJREFUWMPlWc9LFHEU/7zdzQ56UYh+IYJZrOYsepSEoA4iVjMIZRYz1CHCIm/1H+TJToWZh8BZKzHIGSvMICgCT4G5YxmSQYQdNrHEn7vj7uvQbju7uv5Y13XXfdeZ977v++Z93vu8N6SpngoAQ9h6qZQU18fVXkgnX2wpcgTrPGfbfOnrGqnSVM8gAOhugxyWZwyAtsCJROym1JfXT7/lzi/MDv7LWmNKlIUCa2BIUlxJd0ZTPZyAWsp86e0crphfmB2KBI3zdbfx0IEsFk01KgD+EP4Y4eAw862sDczLJ1/yTNOMqTVEkiJQuPhmpZimfwZgC7TIa7fb8/q6PhEAZDWUrPAJBgPFkiLMWdt11ggzg5Y3JZIUF9ntjvlYHpPW8k7/SZa6kHCn0lRPFZENDLZUFPISUT4AiHJ5VMdKeygdFw+w7jY6mPlYXaPzaAJFlkzTXwxgEIju1lO/fxVebj7hj8d801p0t9HEzFcAlGmq8Wqj+j7fYgGAr4iJiqS4aN/eQnO1kSDdpS1yKa7R3UYPAPR3j60Jq97O4WqbzTYZy3g51IxqGw7HJZ+Z0JWuAnhgudRZTfWM1p4/UhpP4a0+QTOz0wcDgaX3K5A3EK1dqtI+Y0RZ6CCitmgaRk7dbejxdLyTP/cHAks/ouFDvpDuus7NiHYtysJ1IttNKxSY+YzuNnpju5Wmeqpzdu2esMCHiehPMBgo2siZGcNjRLm8lYhuxPASSVON0bpGJw/0jFN/99geIloGH1EW8usvVXh3ZGBCmXMPQHsMdXVqqqd7Zm66xOdf9DJHaD4RzUqKi148Ht0w/8mowLx59p0kxdVERM2RBQsDQIPD7hizwgfAPDOXAMCpC6UbXn1k1Kx0sr6IQ5lzV1M9OQBaV5h9QEQkykLuZs7K2FlJUlx3ANxfNvgQTYmyQM8ffaasDMxAzzhJiusaETX9RxVg+vyLTgA4fbGMN2M/Y9cONecOhWHVrrtHCgC+LcpCTrLs74h9jCiXtwBoSabNqL8ECS6u11yDIIG/BNvtiy22om+BUIp0kmrXBqAyRRlfmaR3UuLLXzFINfUgdAZ7AAAAAElFTkSuQmCC') -35px top no-repeat;
+}
+
+.checkbox{
+  display: inline;
+}
+
+.checkbox-inline{
+  font-size: 18px;
 }
 
 span.spanResult {
@@ -97,12 +153,26 @@ li{
     margin: 5px;
     margin-left: -15px;
     margin-right: 15px;
-    display: inline-table;
+    /*display: inline-table;*/
     width: 25%;
 }
 
+.item{
+	animation-duration: 1s;
+  	animation-name: showem;
+  	animation-fill-mode: forwards;
+}
+
+@keyframes showem {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
 .components{
-  background-color:#eee;
   border-color:#222;
   border:2px solid;
   width: 244px;
@@ -127,15 +197,23 @@ li{
     position: absolute;
     top: 0;
     left: 0;
+    transition: top 1s ;
+	-webkit-transition:  top 1s ;
 }
 
-.layer:hover{
-	position: absolute;
-    top: 0;
-    left: 0;
-	padding-top:150px;
-	transition: padding-top 1s ;
-	-webkit-transition:  padding-top 1s ;
+.layerdown{
+	top: 150px;
+    transition: top 1s ;
+	-webkit-transition:  top 1s ;
+}
+
+#taglinks{
+	color:#B0A2D2;
+	text-decoration: none;
+}
+#taglinks:hover{
+	color:#00f28f;
+	text-decoration: none;
 }
 
 span{
@@ -144,9 +222,74 @@ span{
   display: block;
 }
 
+.miniopt{
+  height: 20px;
+  background-color: #333;
+  z-index: 2000;
+  bottom: 3px;
+  color: #fff;
+  text-align: end;
+  transition: bottom 1s ;
+  -webkit-transition:  bottom 1s ;
+}
+
+.miniup{
+  bottom:23px;
+  transition: bottom 1s ;
+  -webkit-transition:  bottom 1s ;
+}
+
+.miniicon{
+  content: '';
+  position: relative;
+  border-color: #333;
+  border-style: solid;
+  border-width: 4px 0px 0px 4px;
+  border-radius: 5px;
+  height: 1em;
+  width: 1em;
+  top: -2px;
+  left: 15.6em;
+  margin-top: -1em;
+  transform: rotate(45deg);
+  opacity: 0.6;
+  transition: top 1s ;
+  -webkit-transition:  top 1s ;
+  cursor: pointer;
+}
+
+.arrowup{
+  top:-25px;
+  transform:rotate(-135deg);
+  transition: transform .5s ;
+  -webkit-transition:  transform .5s ;
+}
+
+#remove{
+  cursor: pointer;
+  color:#B0A2D2;
+  text-decoration: none;
+}
+#remove:hover{
+  color:#EC6866;
+  text-decoration: none;
+}
+
 .text{
   padding: 10px;
   min-height: 100px;
+}
+
+.gallery{
+  color:#B0A2D2;
+  text-decoration: none;
+  padding-left: 10px;
+  outline: none;
+}
+
+.gallery:hover{
+  color:#00f28f;
+  text-decoration: none;
 }
 
 
@@ -163,6 +306,20 @@ span{
     	padding-left: inherit;
 
     }
+    .loader{
+		font-size: 16px;
+	    padding-top: 24px;
+	    padding-bottom: 24px;
+	}
+    .checkbox{
+    display: block;
+  }
+  .checkbox-inline{
+    padding-left: 0px;
+  }
+  .checkbox label{
+    padding-left: 0px;
+  }
 }
 
 @media (max-width: 1200px) {
@@ -173,5 +330,77 @@ span{
 @media (max-width: 993px) {
 	li {
 		width: 49%;
+		padding-right: 2%;
 	}
+}
+
+/*
+    Colorbox Core Style:
+    The following CSS is consistent between example themes and should not be altered.
+*/
+#colorbox, #cboxOverlay, #cboxWrapper{position:absolute; top:0; left:0; z-index:9999; overflow:hidden; -webkit-transform: translate3d(0,0,0);}
+#cboxWrapper {max-width:none;}
+#cboxOverlay{position:fixed; width:100%; height:100%;}
+#cboxMiddleLeft, #cboxBottomLeft{clear:left;}
+#cboxContent{position:relative;}
+#cboxLoadedContent{overflow:auto; -webkit-overflow-scrolling: touch;}
+#cboxTitle{margin:0;}
+#cboxLoadingOverlay, #cboxLoadingGraphic{position:absolute; top:0; left:0; width:100%; height:100%;}
+#cboxPrevious, #cboxNext, #cboxClose, #cboxSlideshow{cursor:pointer;}
+.cboxPhoto{float:left; margin:auto; border:0; display:block; max-width:none; -ms-interpolation-mode:bicubic;}
+.cboxIframe{width:100%; height:100%; display:block; border:0; padding:0; margin:0;}
+#colorbox, #cboxContent, #cboxLoadedContent{box-sizing:content-box; -moz-box-sizing:content-box; -webkit-box-sizing:content-box;}
+
+/* 
+    User Style:
+    Change the following styles to modify the appearance of Colorbox.  They are
+    ordered & tabbed in a way that represents the nesting of the generated HTML.
+*/
+#cboxOverlay{background:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4AUfECUwyAY6oAAAABVJREFUCNdjZGBg+M+ABpgYsAAKBQFnEQEJcOB1sAAAAABJRU5ErkJggg==') repeat 0 0;}
+#colorbox{outline:0;}
+    #cboxTopLeft{width:21px; height:21px; background:url(images/controls.png) no-repeat -101px 0;}
+    #cboxTopRight{width:21px; height:21px; background:url(images/controls.png) no-repeat -130px 0;}
+    #cboxBottomLeft{width:21px; height:21px; background:url(images/controls.png) no-repeat -101px -29px;}
+    #cboxBottomRight{width:21px; height:21px; background:url(images/controls.png) no-repeat -130px -29px;}
+    #cboxMiddleLeft{width:21px; background:url(images/controls.png) left top repeat-y;}
+    #cboxMiddleRight{width:21px; background:url(images/controls.png) right top repeat-y;}
+    #cboxTopCenter{height:21px; background:url(images/border.png) 0 0 repeat-x;}
+    #cboxBottomCenter{height:21px; background:url(images/border.png) 0 -29px repeat-x;}
+    #cboxContent{background-color: #333; overflow:hidden;}
+        .cboxIframe{background:#fff;}
+        #cboxError{padding:50px; border:1px solid #ccc;}
+        #cboxLoadedContent{margin-bottom:28px;}
+        #cboxTitle{position:absolute; bottom:4px; left:0; text-align:center; width:100%; color:#949494;}
+        #cboxCurrent{position:absolute; bottom:4px; left:58px; color:#949494;}
+        #cboxLoadingOverlay{background:url(images/loading_background.png) no-repeat center center;}
+        #cboxLoadingGraphic{background:url(images/loading.gif) no-repeat center center;}
+
+        /* these elements are buttons, and may need to have additional styles reset to avoid unwanted base styles */
+        #cboxPrevious, #cboxNext, #cboxSlideshow, #cboxClose {border:0; padding:0; margin:0; overflow:visible; width:auto; background:none; }
+        
+        /* avoid outlines on :active (mouseclick), but preserve outlines on :focus (tabbed navigating) */
+        #cboxPrevious:active, #cboxNext:active, #cboxSlideshow:active, #cboxClose:active {outline:0;}
+
+        #cboxSlideshow{position:absolute; bottom:4px; right:30px; color:#0092ef;}
+        #cboxPrevious{outline: none;position:absolute; bottom:1px; left:0; background:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4AYBAgUvOE4+lQAAAZhJREFUSMft1c0uQ0EUB/D/ufdKXG1v1BNIJCoSCwuJoBIRQkODhKUXINE+iZUnsJBqVCRNusGK2BCSSuojNiyE+Kje6S16zbEQC2lVP616NrOa/OacMzMHqEetgpl/rDUDRtIbV6VCVCxARBgVG2YjaU4JTkYdU+5iEa2okxBhSISFBDsynMWevN0vpQpFZeI1Q5YE6yDgUN7tvxlLA1VF+s2QlSWpv7PNJ/xwBCPYU2o/qVAPBsW69cq2bsHGKT8m2BXoJKKSL43yG+ATEdNmqWe+gMtygRzkG5gXsWcGO99gI86PF+wKtJcL5CBEhIXMzrGmKM3vkEjw0xmMoKcSIG8mK/pwt4nsCxjwwN2B1HKi0oeckwkzI9w00SwBq4FUdFFLB1LL8Uq+koK3q9dcsz4gdQZwxPcH0hXoK6d0f+7wipClQdFVEHblTVQawcmqIwAwLiKigRSHCgXbH9dh01icq+id5IuYc8apQjF10jCtts0aqZXVqiPMjE2H35DMSYUIY2qrr6bzxJ/eOv+XwVUzoB4A8AlwasSzDUvjqgAAAABJRU5ErkJggg==') no-repeat 0 0; width:25px; height:25px; text-indent:-9999px;}
+        /*#cboxPrevious:hover{background-position:-75px -25px;}*/
+        #cboxNext{outline: none;position:absolute; bottom:1px; left:27px; background:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4AYBAgYFyNikgAAAAatJREFUSMftlbtLI1EUxr/vzviKMyE+0MpFENSVCIo2YiU+kSBr4YqN/8A2u3+JWVhbGzvFFxZWIvhqLCwUn1hZ+5qZOLhJ5li4FkpCMhOzlae5zT33d+8533cu8BnFChF5sxYNMJhYuvIL0vPdSBKxxOqdAiNDzpJN0hQRkMyZq/y8ZjN9vedKEh7E6HMWnXwAAEC/ZSuzfu92q/peCKBAd8ecDH04BABgzRx0sLarlDpLRLl7OUAMKgLa8ZMoa76GoKOcurttfA9l65EKAiEJMX+2HcvNpYsUUuJVjDrLNsmMqlNBJf0P1HwkNxdPSEEgxrSzcZcJpArxDkkg/KvlVG7P/sKDrlTkh7t5+L5kesEutWZOW1DVCgFsJB/mKoY73/dGL2QC0I4ftbO6tQQaPOBxMRSLZGq+HhSg7Ph+N+uixItftsyJymzqCgTR7Ph6v2roSUOQgufuGC8+yTYBfENM68/CgPYlloaHpHiJDWPCyHkpP4CwNTs/rjVNaVRIQ+x145uZT54vCY9ojaOKhCdyv1I5Fv7wf+X1wLHE2vl/+biKBvgMAHgGOcW1a3oXDY4AAAAASUVORK5CYII=') no-repeat 0 0; width:25px; height:25px; text-indent:-9999px;}
+        /*#cboxNext:hover{background-position:-50px -25px;}*/
+        #cboxClose{outline: none;position:absolute; bottom:1px; right:0; background:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4AYBAgkMNpwA6wAAAuhJREFUSMftlU9rXFUYxn/vOXem8+fOJU5DikpLMJhGaMDSdFErhdBWQinBpIzSjV+ggswnGQrmE3TXIdRSMVAMXWiKWMXALBojbszGQhKHO3fmTubO3NeFM22aTDoDIm76bA68D+f8eM55Dy+81n8lVX1p/Ve6Wl/+/Wp9uS+gVz8I6renJzlYuF7/6i+DjDS1HQC5h+6N/R4GoaltHro3UFVEhI+C5VpKHDdGq8AbX2c/fulMcxCy2tlaCzUiRt2IOJgNyvs9uh6zQRkRYTYoBzHqhhqx2tlaW+1sDU4CcMy//f2MOXERBYOEQOa73Kc9jxlzgq7XiNE0Aj/Fz9aAD/e8L4aDAOCXnrwvo+eS4khCTQhk1rog/BIX5a1GJHG6pW1d1+2fgfN4xb5HmSMhXvH8um5vNDQiopO2Io1LwV0ALpm3GxGddEMj1nV7owc4qutkYKv5pc1pOf5ujiQjkgwAqtpya7So6M5vwOQH8iYjkuQbd/F5MwyX5EWiyYrubO7RJk/KVdTdo01FdzaBSYA92ijKZ8EKInIokRnq43jF01M230waS4uYLa01x0idxiuCV+Sp7tIixjGGW+HqoSQyFMQvPT3L6NQ7doRq3GRXm/zC9gbwHsBZRslLirxNU85cP3RlZghAZVryUwmx7MbNRgyNhFimJT8FVAASYomhL2AgRPzS4xkZO5PCwSBhSDv7KFfIGiRM4TAjY2cEHj/RZzzKFfoCXgkxfunBZXPyQk6SpMQJE2IyP+RuAvCj/plJiRPmJMllc/KCwAPjl/oCjnyTnP/l3Sv2VKFDTKRxHXBX3MWexxV7iq4XJMRkLYZvO3+UgU9q3ueDk3j+0p0FO1FIi4PF1FLiPAd4/hILdoKux4q76FpMLS0OC3aiIMgdz18aDJmz49eMCLFq9RjWu5ed3+/R9biXnUf/Wb1YtWpEmLPj1+bs+HDzZL5+/9f5+v2+86RXP/jh+u35/yfjax2lvwF6ElI5cUhceAAAAABJRU5ErkJggg==') no-repeat 0 0; width:25px; height:25px; text-indent:-9999px;}
+        /*#cboxClose:hover{background-position:-25px -25px;}*/
+
+/*
+  The following fixes a problem where IE7 and IE8 replace a PNG's alpha transparency with a black fill
+  when an alpha filter (opacity change) is set on the element or ancestor element.  This style is not applied to or needed in IE9.
+  See: http://jacklmoore.com/notes/ie-transparency-problems/
+*/
+.cboxIE #cboxTopLeft,
+.cboxIE #cboxTopCenter,
+.cboxIE #cboxTopRight,
+.cboxIE #cboxBottomLeft,
+.cboxIE #cboxBottomCenter,
+.cboxIE #cboxBottomRight,
+.cboxIE #cboxMiddleLeft,
+.cboxIE #cboxMiddleRight {
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#00FFFFFF,endColorstr=#00FFFFFF);
 }
