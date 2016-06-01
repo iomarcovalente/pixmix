@@ -4,6 +4,7 @@
 	<link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css' rel='stylesheet'>
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
+
 	<meta name=viewport content="width=device-width, initial-scale=1">
 	<meta name="theme-color" content=" #00f28f" />
 	</head>
@@ -28,7 +29,9 @@
 						</div>
 
 						<div class="col-xs-4 col-md-2">
-						<button type="submit" class="btn">go</button>
+
+							<button id="go" type="submit" class="btn">go</button>
+							<div id="loadbar" style="display:none;">loading...</div>
 						</div>
 
 					</form>					
@@ -39,6 +42,11 @@
 						<form class="form" rule="form">
 								<button class="optbutton" id="option1" type="button" name="tag">tag</button>
 								<button class="optbutton" id="option2" type="button" name="random">randomize</button>
+								<div class="checkbox">
+									<input type="checkbox" id="keepcheck" />
+									<label for="keepcheck" class="checkbox-inline"><span></span>
+									save results</label>
+								</div>  
 								<span id="result" class="spanResult"></span>
 						</form> 
 					</div>
@@ -52,6 +60,16 @@
 			</div>
 	<script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
 	<script src="script.js"></script>
+
+	<script src="https://rawgit.com/jackmoore/colorbox/master/jquery.colorbox-min.js"></script>
+	<script src="https://rawgit.com/jackmoore/colorbox/master/jquery.colorbox.js"></script>
+	<script type="application/json" src="https://rawgit.com/jackmoore/colorbox/master/package.json"></script>
+<!--
+	<link rel="stylesheet" href="./fancybox/source/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+	<script type="text/javascript" src="./fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+-->
+	
+
 
 	</body>
 </html>
