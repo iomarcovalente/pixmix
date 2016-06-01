@@ -1,5 +1,5 @@
 # About pixmix
-A simple webapp to fetch last uploaded images from the Flickr public API and display them neatly on a table-like fashion.
+A simple webapp that fetch last uploaded images from the Flickr public API and display them neatly on a table-like fashion.
 
 ## Changelog:
 
