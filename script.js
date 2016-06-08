@@ -226,7 +226,7 @@ var openmini = function(){
   for (var i = 0; i < arricons.length/searchCount; i++) {
       arricons[i].addEventListener('click', function(e){
         e.target.nextSibling.lastElementChild.addEventListener('click', function(e){
-        e.target.parentNode.parentNode.parentNode.remove();
+        e.target.parentNode.parentNode.parentNode.remove();//removes the list item
       },false);
         miniVisible = /(arrowup)/.test(e.target.classList);
         if (!miniVisible){
